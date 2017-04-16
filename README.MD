@@ -1,6 +1,7 @@
 # Install with Global
 
 chmod 755 ./bin/folderTree.js
+
 npm link
 
 
@@ -69,6 +70,8 @@ Author:Linshuizhaoying
 ### Isolate the specify root directory
 origin:
 
+```
+
 folderTree (if node_modules folder existed will display the folder)
 
 ├── .DS_Store
@@ -87,7 +90,11 @@ folderTree (if node_modules folder existed will display the folder)
     └── index.js
 level:2
 
+```
+
 new:
+
+```
 
 folderTree -e README.MD,bin,node_modules
 
@@ -106,4 +113,6 @@ level:2
 
 
 目录及文件罗列完毕
+
+```
 
