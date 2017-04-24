@@ -1,3 +1,6 @@
+# Update Log
+解决缓存目录深度过度问题。
+
 # Install with Global
 
 chmod 755 ./bin/folderTree.js

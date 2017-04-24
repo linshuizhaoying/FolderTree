@@ -25,7 +25,7 @@ var argv = require('yargs')
     .option('e', {
         alias: 'except',
         // type: 'string',
-        default: 'node_modules',
+        default: 'node_modules,.git',
         describe: '隔离根目录指定文件夹/文件,如果需要一个列表，用逗号隔开'
     })
     .usage('Usage: folderTree [options]')
@@ -49,6 +49,7 @@ if (!argv.f) {
     exceptArr = list
     console.log(exceptArr)
     folderFactory.listFolder(level, argv.f, exceptArr)
+    folderFactory._watcher(argv.f)
         // console.log('目录结构:')
         // console.log(struct)
 }
