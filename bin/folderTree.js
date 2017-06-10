@@ -47,16 +47,14 @@ if (!argv.f) {
     var exceptArr = []
     var list = argv.e == "node_modules" || argv.e.length == undefined ? "node_modules" : argv.e.split(',')
     exceptArr = list
-    console.log(exceptArr)
-    folderFactory.listFolder(level, argv.f, exceptArr)
-    folderFactory._watcher(argv.f)
-        // console.log('目录结构:')
-        // console.log(struct)
-}
+        //console.log(exceptArr)
+    if (argv.w) {
+        folderFactory.listFolder(level, argv.f, exceptArr)
+        folderFactory._watcher(argv.f, argv.w)
+    } else {
+        folderFactory.listFolder(level, argv.f, exceptArr)
 
-if (!argv.w) {
-    console.log('正在写入: ', argv.w);
-} else {
-    //console.log('准备写入默认文件: ', argv.w);
-    console.log('\n')
-}
+    }
+    // console.log('目录结构:')
+    // console.log(struct)
+} 
