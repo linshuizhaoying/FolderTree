@@ -13,7 +13,6 @@ var argv = require('yargs')
     .option('w', {
         alias: 'fileName',
         // type: 'string',
-        default: 'README.md',
         describe: '输出文件名'
     })
     .option('l', {
@@ -38,9 +37,7 @@ var argv = require('yargs')
     .epilog('Author:Linshuizhaoying')
     .argv;
 
-if (!argv.f) {
-    console.log('准备监听: ', argv.f);
-} else {
+if (argv.f) {
     //console.log('准备监听目录: ', argv.f);
     // console.log(process)
     var level = null || argv.l

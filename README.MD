@@ -1,6 +1,9 @@
 # Update Log
 解决缓存目录深度过度问题。
 
+---- 2017-6-11 ----
+添加写入功能
+
 # Install with Global
 
 chmod 755 ./bin/folderTree.js
@@ -118,4 +121,10 @@ level:2
 目录及文件罗列完毕
 
 ```
+
+### Write File
+
+folderTree -w result.md
+
+
 
